@@ -1,6 +1,6 @@
 #include "MakeImage.hpp"
 #include <opencv2/opencv.hpp>
-  using namespace cv;
+using namespace cv;
 
 MakeImage::MakeImage(int x, int y){
     width = x;

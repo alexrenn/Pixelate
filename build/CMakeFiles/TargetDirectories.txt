@@ -1,0 +1,3 @@
+/Users/alexren/pixel_project/build/CMakeFiles/MyProject.dir
+/Users/alexren/pixel_project/build/CMakeFiles/edit_cache.dir
+/Users/alexren/pixel_project/build/CMakeFiles/rebuild_cache.dir
