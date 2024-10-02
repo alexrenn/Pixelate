@@ -25,15 +25,6 @@ private:
     std::vector<LegoColor> legoColors = {
          { "Black",    cv::Vec3b(21, 21, 21) },
          { "White",    cv::Vec3b(244, 244, 244) },
-        // { "Red",      cv::Vec3b(0, 0, 181) },      // Note: OpenCV uses BGR
-        // { "Blue",     cv::Vec3b(184, 87, 0) },
-        // { "Yellow",   cv::Vec3b(0, 204, 255) },
-        // // Add more LEGO colors as needed
-        // { "Green",    cv::Vec3b(0, 128, 0) },
-        // { "Dark Gray",cv::Vec3b(92, 110, 109) },
-        //  { "Light Gray",cv::Vec3b(211, 211, 211) },
-        // { "Brown",    cv::Vec3b(42, 42, 165) },
-        // { "Orange",   cv::Vec3b(0, 165, 255) },
          { "Titanium Metallic", cv::Vec3b(62, 66, 66)},
          { "Light Royal Blue",   cv::Vec3b(247, 212, 180)},
          { "Dark Orange",   cv::Vec3b(34, 83, 166)},
@@ -86,15 +77,6 @@ private:
 
         // ... add other colors
 
-        // 
-        //   //initalize colors
-
-//   BGRColor mediumnougat(33,49,67);
-//   BGRColor brightred(4,10,79);
-//   BGRColor flameyellowishorange(24,73,97);
-//   BGRColor brickyellow(62,80,89);
-//   BGRColor mediumlilac(57,21,25);
-        // 
     };
 
 

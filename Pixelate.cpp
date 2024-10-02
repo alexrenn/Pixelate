@@ -3,6 +3,7 @@ This class takes in an image as a parameter, calculates pixelates the image
 based on the blur intensity.
 */
 
+#include <omp.h>
 #include "Pixelate.hpp"
 #include "MakeImage.hpp"
 #include "ColorMatch.hpp"
@@ -39,6 +40,10 @@ cv::Vec3b Pixelate::averageValue(int offsetx, int offsety, int blocksize)
   int sumB = 0;
   int sumR = 0;
   int sumG = 0;
+  
+  //collapse for loops. Shared variable sumB, sumR, sumG, and pixelCount. Ensure threads wait to for other threads to complete before updating
+ 
+ // #pragma omp parallel for collapse (2) reduction (+:sumB, sumR, sumG, pixelcount)
   for(int i = offsetx; i < offsetx + blocksize; i++)
   {
     for(int j = offsety; j < offsety + blocksize; j++)
@@ -50,6 +55,8 @@ cv::Vec3b Pixelate::averageValue(int offsetx, int offsety, int blocksize)
     }
   }
 
+//don't move on until all threads are complete
+//#pragma omp barrier
   double avgB = sumB/pixelcount;
   double avgR = sumR/pixelcount;
   double avgG = sumG/pixelcount;
@@ -101,9 +108,6 @@ int Pixelate::DetermineBlur()
 
 cv::Mat Pixelate::pixelateImage()
 {
-  //Initialize LEGO colors
-  // LegoColorClass newColors;
-  // std::vector<LegoColorClass::LegoColor> legoColors = newColors.initializeLegoColors();  
   int numBlocks = 0;
   int blocksize = 0;
   // Create an empty image named output with 3 channels (BGR) and 8-bit depth

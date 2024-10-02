@@ -21,12 +21,7 @@ cv::Mat MakeImage::makePixels(int offsetx, int offsety,int blocksize, cv::Vec3b 
     // Iterate through each pixel and set its color
     for (int x = offsetx; x < offsetx+blocksize; x++) {
         for (int y = offsety; y < offsety+blocksize; y++) {
-            // Set blue channel to x value, green channel to y value, and red channel to 128
-            //std::cout << "colB: " << color[0];
-            //std::cout << ", colG: " << color[1];
-            //std::cout << ", colR: " << color[2] << std::endl;
             output.at<cv::Vec3b>(x, y) = cv::Vec3b(colB, colG, colR );
-
         }
     }
     return output;
