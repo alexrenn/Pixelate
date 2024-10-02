@@ -1,5 +1,8 @@
 #ifndef PIXELATE_HPP
 #define PIXELATE_HPP
+#include "ColorMatch.hpp"
+#include "LegoColorClass.hpp"
+#include "MakeImage.hpp"
 #include <opencv2/opencv.hpp>
 
 enum Imagesize{
@@ -15,7 +18,7 @@ public:
   Pixelate(cv::Mat img, int blur);
   Pixelate(cv::Mat img, Imagesize size);
   int DetermineBlur();
-  std::vector<double> averageValue(int offsetx, int offsety, int blocksize);
+  cv::Vec3b averageValue(int offsetx, int offsety, int blocksize);
   cv::Mat pixelateImage();
   int getWidth();
   int getHeight();

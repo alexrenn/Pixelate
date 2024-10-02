@@ -1,5 +1,12 @@
+/*
+This class takes in an image as a parameter, calculates pixelates the image
+based on the blur intensity.
+*/
+
 #include "Pixelate.hpp"
 #include "MakeImage.hpp"
+#include "ColorMatch.hpp"
+#include "LegoColorClass.hpp"
 #include <opencv2/opencv.hpp>
 using namespace cv;
 
@@ -25,30 +32,34 @@ int Pixelate::getHeight()
   return image.cols;
 }
 
-std::vector<double> Pixelate::averageValue(int offsetx, int offsety, int blocksize)
+//this function calculates the blurred pixel's bgr value and returns it in a vector
+cv::Vec3b Pixelate::averageValue(int offsetx, int offsety, int blocksize)
 {
   int pixelcount = 0;
-  int sumX = 0;
-  int sumY = 0;
-  int sumZ = 0;
+  int sumB = 0;
+  int sumR = 0;
+  int sumG = 0;
   for(int i = offsetx; i < offsetx + blocksize; i++)
   {
     for(int j = offsety; j < offsety + blocksize; j++)
 	  {
-      sumX += image.at<Vec3b>(i,j) [0];
-      sumY += image.at<Vec3b>(i,j) [1];
-	    sumZ += image.at<Vec3b>(i,j) [2]; 
+      sumB += image.at<Vec3b>(i,j) [0];
+      sumR += image.at<Vec3b>(i,j) [1];
+	    sumG += image.at<Vec3b>(i,j) [2]; 
       pixelcount++;
     }
   }
 
-  double avgX = sumX/pixelcount;
-  double avgY = sumY/pixelcount;
-  double avgZ = sumZ/pixelcount;
-  //std::cout << "Block (" << offsetx << ", " << offsety << ") - Avg Values: ["  << avgX << ", " << avgY << ", " << avgZ << "]" << std::endl;
-  std::vector<double> averageXYZ = { avgX, avgY, avgZ };
+  double avgB = sumB/pixelcount;
+  double avgR = sumR/pixelcount;
+  double avgG = sumG/pixelcount;
+  std::cout << "Block (" << offsetx << ", " << offsety << ") - Avg Values: ["  << avgB << ", " << avgR << ", " << avgG << "]" << std::endl;
+  cv::Vec3b averageBRG;
+  averageBRG[0] = avgB;
+  averageBRG[1] = avgR;
+  averageBRG[2] = avgG;
 
-  return averageXYZ;
+  return averageBRG;
 }
 
 
@@ -90,9 +101,12 @@ int Pixelate::DetermineBlur()
 
 cv::Mat Pixelate::pixelateImage()
 {
+  //Initialize LEGO colors
+  // LegoColorClass newColors;
+  // std::vector<LegoColorClass::LegoColor> legoColors = newColors.initializeLegoColors();  
   int numBlocks = 0;
   int blocksize = 0;
-  // Create an empty image with 3 channels (BGR) and 8-bit depth
+  // Create an empty image named output with 3 channels (BGR) and 8-bit depth
   cv::Mat output(this -> getHeight(), this -> getWidth(), CV_8UC3, cv::Scalar(0, 0, 0));
   MakeImage pixelatedImage(getWidth(), getHeight());
 
@@ -104,12 +118,23 @@ cv::Mat Pixelate::pixelateImage()
 
   std::cout << "blocksize: " << blocksize << std::endl;
   
+  //iternate through each block, match the bgr to closest lego color
+  //call MakeImage's function makePixels 
+
+  ColorMatch distanceFinder;
+  cv::Vec3b averagePixelValue;
+  LegoColorClass getColors;
+  cv::Vec3b averageBRG;
+  
   for(int i = 0; i <= getWidth() - blocksize; i += blocksize)
   {
-      for(int j = 0; j <= getHeight() - blocksize; j += blocksize)
+    for(int j = 0; j <= getHeight() - blocksize; j += blocksize)
     {
-        numBlocks++;
-        pixelatedImage.makePixels(i, j, blocksize, averageValue(i, j, blocksize), output);
+      numBlocks++;
+      averageBRG = averageValue(i,j,blocksize);
+      //std::cout << "averageBRG[0]: " << averageBRG[0] << std::endl;
+      std::cout << (distanceFinder.findClosestLegoColor((averageBRG), getColors.getLegoColors())).bgr << std::endl;
+      pixelatedImage.makePixels(i, j, blocksize, (distanceFinder.findClosestLegoColor((averageBRG), getColors.getLegoColors())).bgr, output);
     }
   }
     std::cout << "Number of Pieces: " << numBlocks << std::endl;

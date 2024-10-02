@@ -9,7 +9,7 @@ private:
 
 public:
     MakeImage(int x, int y);
-    cv::Mat makePixels(int offsetx, int offsety,int blocksize, std::vector<double> avgValues,cv::Mat output );
+    cv::Mat makePixels(int offsetx, int offsety,int blocksize, cv::Vec3b color,cv::Mat output );
 };
 
 #endif // MAKEIMAGE_H

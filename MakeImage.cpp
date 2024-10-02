@@ -1,3 +1,7 @@
+/*
+This class creates the image using the average values calculated in Pixelate.cpp.
+It iterates through each pixel and sets the pixel color.
+*/
 #include "MakeImage.hpp"
 #include <opencv2/opencv.hpp>
 using namespace cv;
@@ -8,17 +12,20 @@ MakeImage::MakeImage(int x, int y){
  }
 
 
-cv::Mat MakeImage::makePixels(int offsetx, int offsety,int blocksize, std::vector<double> avgValues, cv::Mat output)
+cv::Mat MakeImage::makePixels(int offsetx, int offsety,int blocksize, cv::Vec3b color, cv::Mat output)
 {
-    double avgX = avgValues.at(0);
-    double avgY = avgValues.at(1);
-    double avgZ = avgValues.at(2);
+    double colB = color[0];
+    double colG = color[1];
+    double colR = color[2];
 
     // Iterate through each pixel and set its color
     for (int x = offsetx; x < offsetx+blocksize; x++) {
         for (int y = offsety; y < offsety+blocksize; y++) {
             // Set blue channel to x value, green channel to y value, and red channel to 128
-            output.at<cv::Vec3b>(x, y) = cv::Vec3b(avgX, avgY, avgZ );
+            //std::cout << "colB: " << color[0];
+            //std::cout << ", colG: " << color[1];
+            //std::cout << ", colR: " << color[2] << std::endl;
+            output.at<cv::Vec3b>(x, y) = cv::Vec3b(colB, colG, colR );
 
         }
     }

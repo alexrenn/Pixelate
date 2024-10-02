@@ -1,12 +1,12 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 #include "MakeImage.hpp"
-#include "Pixelate.cpp"
-  using namespace cv;
+#include "Pixelate.hpp"
+using namespace cv;
 
 int main() {
     //Read the image from path
-    std::string PATH = "/Users/alexren/Downloads/blond.jpg";
+    std::string PATH = "/Users/alexren/Downloads/SZA_SOS.jpeg";
     Mat image = imread(PATH, IMREAD_COLOR);
     
     //test to see if image can be read
@@ -23,11 +23,11 @@ int main() {
         return 1;
     }
 
-
    char qpixelart, size;
    enum Imagesize plateSize;
    int blur;
-   
+
+
   //ask if using program to create lego pixel art
    std::cout << "Are you using a baseplate to create pixel art? Answer 'y' or 'n'" << std::endl;
    std::cin >> qpixelart;
@@ -46,6 +46,7 @@ int main() {
       else if (size == 'l') 
         plateSize = LARGE;
       
+      //create an object to be pixelated, with two parameters passed though
       Pixelate downloadedImage(image, plateSize);
       std::cout << "Image width: " << downloadedImage.getWidth() << std::endl;
       std::cout << "Image height: " << downloadedImage.getHeight() << std::endl;
@@ -56,13 +57,13 @@ int main() {
 
       // Save the image to a file
       cv::imwrite("output_image.png", downloadedImage.pixelateImage());
-   }else if (qpixelart = 'n')
+   }else if (qpixelart == 'n')
    {
        std::cout << "On a scale of 0-100, how much would you like to blur your image?" << std::endl;
        std::cin >> blur;
 
        Pixelate downloadedImage(image, blur);
-       std::cout << "Image width: " << downloadedImage.getWidth() << std::endl;
+      std::cout << "Image width: " << downloadedImage.getWidth() << std::endl;
       std::cout << "Image height: " << downloadedImage.getHeight() << std::endl;
     
       // Display the image
@@ -77,3 +78,4 @@ int main() {
     return 0;
 
 }
+
