@@ -83,10 +83,52 @@ CMakeFiles/MyProject.dir/MakeImage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyProject.dir/MakeImage.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexren/pixel_project/MakeImage.cpp -o CMakeFiles/MyProject.dir/MakeImage.cpp.s
 
+CMakeFiles/MyProject.dir/ColorMatch.cpp.o: CMakeFiles/MyProject.dir/flags.make
+CMakeFiles/MyProject.dir/ColorMatch.cpp.o: /Users/alexren/pixel_project/ColorMatch.cpp
+CMakeFiles/MyProject.dir/ColorMatch.cpp.o: CMakeFiles/MyProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexren/pixel_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MyProject.dir/ColorMatch.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyProject.dir/ColorMatch.cpp.o -MF CMakeFiles/MyProject.dir/ColorMatch.cpp.o.d -o CMakeFiles/MyProject.dir/ColorMatch.cpp.o -c /Users/alexren/pixel_project/ColorMatch.cpp
+
+CMakeFiles/MyProject.dir/ColorMatch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyProject.dir/ColorMatch.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexren/pixel_project/ColorMatch.cpp > CMakeFiles/MyProject.dir/ColorMatch.cpp.i
+
+CMakeFiles/MyProject.dir/ColorMatch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyProject.dir/ColorMatch.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexren/pixel_project/ColorMatch.cpp -o CMakeFiles/MyProject.dir/ColorMatch.cpp.s
+
+CMakeFiles/MyProject.dir/LegoColorClass.cpp.o: CMakeFiles/MyProject.dir/flags.make
+CMakeFiles/MyProject.dir/LegoColorClass.cpp.o: /Users/alexren/pixel_project/LegoColorClass.cpp
+CMakeFiles/MyProject.dir/LegoColorClass.cpp.o: CMakeFiles/MyProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexren/pixel_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyProject.dir/LegoColorClass.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyProject.dir/LegoColorClass.cpp.o -MF CMakeFiles/MyProject.dir/LegoColorClass.cpp.o.d -o CMakeFiles/MyProject.dir/LegoColorClass.cpp.o -c /Users/alexren/pixel_project/LegoColorClass.cpp
+
+CMakeFiles/MyProject.dir/LegoColorClass.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyProject.dir/LegoColorClass.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexren/pixel_project/LegoColorClass.cpp > CMakeFiles/MyProject.dir/LegoColorClass.cpp.i
+
+CMakeFiles/MyProject.dir/LegoColorClass.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyProject.dir/LegoColorClass.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexren/pixel_project/LegoColorClass.cpp -o CMakeFiles/MyProject.dir/LegoColorClass.cpp.s
+
+CMakeFiles/MyProject.dir/Pixelate.cpp.o: CMakeFiles/MyProject.dir/flags.make
+CMakeFiles/MyProject.dir/Pixelate.cpp.o: /Users/alexren/pixel_project/Pixelate.cpp
+CMakeFiles/MyProject.dir/Pixelate.cpp.o: CMakeFiles/MyProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexren/pixel_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyProject.dir/Pixelate.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyProject.dir/Pixelate.cpp.o -MF CMakeFiles/MyProject.dir/Pixelate.cpp.o.d -o CMakeFiles/MyProject.dir/Pixelate.cpp.o -c /Users/alexren/pixel_project/Pixelate.cpp
+
+CMakeFiles/MyProject.dir/Pixelate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyProject.dir/Pixelate.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexren/pixel_project/Pixelate.cpp > CMakeFiles/MyProject.dir/Pixelate.cpp.i
+
+CMakeFiles/MyProject.dir/Pixelate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyProject.dir/Pixelate.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexren/pixel_project/Pixelate.cpp -o CMakeFiles/MyProject.dir/Pixelate.cpp.s
+
 CMakeFiles/MyProject.dir/main.cpp.o: CMakeFiles/MyProject.dir/flags.make
 CMakeFiles/MyProject.dir/main.cpp.o: /Users/alexren/pixel_project/main.cpp
 CMakeFiles/MyProject.dir/main.cpp.o: CMakeFiles/MyProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexren/pixel_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MyProject.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexren/pixel_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MyProject.dir/main.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyProject.dir/main.cpp.o -MF CMakeFiles/MyProject.dir/main.cpp.o.d -o CMakeFiles/MyProject.dir/main.cpp.o -c /Users/alexren/pixel_project/main.cpp
 
 CMakeFiles/MyProject.dir/main.cpp.i: cmake_force
@@ -100,12 +142,18 @@ CMakeFiles/MyProject.dir/main.cpp.s: cmake_force
 # Object files for target MyProject
 MyProject_OBJECTS = \
 "CMakeFiles/MyProject.dir/MakeImage.cpp.o" \
+"CMakeFiles/MyProject.dir/ColorMatch.cpp.o" \
+"CMakeFiles/MyProject.dir/LegoColorClass.cpp.o" \
+"CMakeFiles/MyProject.dir/Pixelate.cpp.o" \
 "CMakeFiles/MyProject.dir/main.cpp.o"
 
 # External object files for target MyProject
 MyProject_EXTERNAL_OBJECTS =
 
 MyProject: CMakeFiles/MyProject.dir/MakeImage.cpp.o
+MyProject: CMakeFiles/MyProject.dir/ColorMatch.cpp.o
+MyProject: CMakeFiles/MyProject.dir/LegoColorClass.cpp.o
+MyProject: CMakeFiles/MyProject.dir/Pixelate.cpp.o
 MyProject: CMakeFiles/MyProject.dir/main.cpp.o
 MyProject: CMakeFiles/MyProject.dir/build.make
 MyProject: /opt/homebrew/lib/libopencv_gapi.4.10.0.dylib
@@ -165,7 +213,7 @@ MyProject: /opt/homebrew/lib/libopencv_photo.4.10.0.dylib
 MyProject: /opt/homebrew/lib/libopencv_imgproc.4.10.0.dylib
 MyProject: /opt/homebrew/lib/libopencv_core.4.10.0.dylib
 MyProject: CMakeFiles/MyProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/alexren/pixel_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MyProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/alexren/pixel_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable MyProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

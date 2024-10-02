@@ -129,6 +129,54 @@ MyProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/build
 .PHONY : MyProject/fast
 
+ColorMatch.o: ColorMatch.cpp.o
+.PHONY : ColorMatch.o
+
+# target to build an object file
+ColorMatch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/ColorMatch.cpp.o
+.PHONY : ColorMatch.cpp.o
+
+ColorMatch.i: ColorMatch.cpp.i
+.PHONY : ColorMatch.i
+
+# target to preprocess a source file
+ColorMatch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/ColorMatch.cpp.i
+.PHONY : ColorMatch.cpp.i
+
+ColorMatch.s: ColorMatch.cpp.s
+.PHONY : ColorMatch.s
+
+# target to generate assembly for a file
+ColorMatch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/ColorMatch.cpp.s
+.PHONY : ColorMatch.cpp.s
+
+LegoColorClass.o: LegoColorClass.cpp.o
+.PHONY : LegoColorClass.o
+
+# target to build an object file
+LegoColorClass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/LegoColorClass.cpp.o
+.PHONY : LegoColorClass.cpp.o
+
+LegoColorClass.i: LegoColorClass.cpp.i
+.PHONY : LegoColorClass.i
+
+# target to preprocess a source file
+LegoColorClass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/LegoColorClass.cpp.i
+.PHONY : LegoColorClass.cpp.i
+
+LegoColorClass.s: LegoColorClass.cpp.s
+.PHONY : LegoColorClass.s
+
+# target to generate assembly for a file
+LegoColorClass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/LegoColorClass.cpp.s
+.PHONY : LegoColorClass.cpp.s
+
 MakeImage.o: MakeImage.cpp.o
 .PHONY : MakeImage.o
 
@@ -152,6 +200,30 @@ MakeImage.s: MakeImage.cpp.s
 MakeImage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/MakeImage.cpp.s
 .PHONY : MakeImage.cpp.s
+
+Pixelate.o: Pixelate.cpp.o
+.PHONY : Pixelate.o
+
+# target to build an object file
+Pixelate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/Pixelate.cpp.o
+.PHONY : Pixelate.cpp.o
+
+Pixelate.i: Pixelate.cpp.i
+.PHONY : Pixelate.i
+
+# target to preprocess a source file
+Pixelate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/Pixelate.cpp.i
+.PHONY : Pixelate.cpp.i
+
+Pixelate.s: Pixelate.cpp.s
+.PHONY : Pixelate.s
+
+# target to generate assembly for a file
+Pixelate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/Pixelate.cpp.s
+.PHONY : Pixelate.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -186,9 +258,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MyProject"
+	@echo "... ColorMatch.o"
+	@echo "... ColorMatch.i"
+	@echo "... ColorMatch.s"
+	@echo "... LegoColorClass.o"
+	@echo "... LegoColorClass.i"
+	@echo "... LegoColorClass.s"
 	@echo "... MakeImage.o"
 	@echo "... MakeImage.i"
 	@echo "... MakeImage.s"
+	@echo "... Pixelate.o"
+	@echo "... Pixelate.i"
+	@echo "... Pixelate.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
