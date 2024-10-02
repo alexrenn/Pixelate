@@ -1,0 +1,1 @@
+This project takes in any image from your local device as an input, then pixelates it. It matches the pixelated BGR values to the current avaliable BGR values. The program also takes into account whether or not a base plate is used (size constraint).
